@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title> Menu </title>
+		<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+		<script>
+			function start(){
+				sjs.open();
+				var menu = new sjs.Text("Main Menu", 25, "black");
+				menu.centerH();
+
+				//Instructions
+				var instruct = new sjs.Text("Use the arrows to move your paddles. Hit the ball to get a point!", 15, "black");
+				instruct.centerH();
+				instruct.offset(0,30);
+
+				//Classic Mode
+				var classic = new sjs.Button("Classic Mode", function(){
+					window.location = "pong.html";
+				});
+				classic.center();
+				classic.offset(0,-50);
+
+
+				//Infinite Mode
+				var infinite = new sjs.Button("Infinite Mode", function(){
+					window.location = "infinite_pong.html";
+				});
+				infinite.center();
+				infinite.offset(0,50)
+
+				//creator
+				var creator = new sjs.Text("Created by Collin", 15, "black");
+				creator.centerH().bottom();
+
+			} //end start
+		</script>
+	</head>
+	<body onload="start()">
+		<h1> Menu </h1>
+
+		<div id="target" style="margin:auto;background:white;"></div>
+	</body>
+</html>
